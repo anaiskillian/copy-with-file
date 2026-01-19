@@ -3,6 +3,7 @@
   "publisher": "AnaisKillian",
   "displayName": "copy-with-file",
   "description": "",
+  "icon": "copy-with-file.png",
   "version": "0.0.4",
   "license": "MIT",
   "repository": {
