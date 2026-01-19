@@ -19,6 +19,6 @@ def bubble_sort(values: Iterable[int]) -> List[int]:
 
 
 if __name__ == "__main__":
-    data = [5, 1, 4, 2, 8]
+    data = [5, 1, 4, 2, 8, 3, 9, 6, 7]
     sorted_data = bubble_sort(data)
     print(f"sorted: {sorted_data}")
