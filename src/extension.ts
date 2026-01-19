@@ -1,10 +1,10 @@
 import * as vscode from "vscode";
 
-export function activate(context: vscode.ExtensionContext) {
-  console.log('Extension "copy-with-context" is active');
+export function activate(fileContext: vscode.ExtensionContext) {
+  console.log('Extension "copy-with-file" is active');
 
   const disposable = vscode.commands.registerCommand(
-    "copyWithContext.copy",
+    "copyWithFile.copy",
     async () => {
       const editor = vscode.window.activeTextEditor;
       if (!editor) {
@@ -27,11 +27,11 @@ line ${line}
 )`;
 
       await vscode.env.clipboard.writeText(tuple);
-      vscode.window.showInformationMessage("Copied with context");
+      vscode.window.showInformationMessage("Copied with file");
     }
   );
 
-  context.subscriptions.push(disposable);
+  fileContext.subscriptions.push(disposable);
 }
 
 export function deactivate() {}

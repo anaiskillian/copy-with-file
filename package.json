@@ -14,19 +14,19 @@
   },
   "categories": ["Other"],
   "activationEvents": [
-    "onCommand:copyWithContext.copy"
+    "onCommand:copyWithFile.copy"
   ],
   "main": "./out/extension.js",
   "contributes": {
     "commands": [
       {
-        "command": "copyWithContext.copy",
-        "title": "Copy With Context (code, file, line)"
+        "command": "copyWithFile.copy",
+        "title": "Copy With File (code, file, line)"
       }
     ],
     "keybindings": [
       {
-        "command": "copyWithContext.copy",
+        "command": "copyWithFile.copy",
         "key": "cmd+alt+c",
         "mac": "cmd+alt+c",
         "when": "editorTextFocus && !terminalFocus"
