@@ -20,11 +20,9 @@ export function activate(fileContext: vscode.ExtensionContext) {
 
       const line = editor.selection.start.line + 1;
 
-      const tuple = `(
-${selection},
+      const tuple = `${selection},
 "${file}",
-line ${line}
-)`;
+line ${line}`;
 
       await vscode.env.clipboard.writeText(tuple);
       vscode.window.showInformationMessage("Copied with file");
