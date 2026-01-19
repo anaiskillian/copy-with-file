@@ -3,7 +3,7 @@ import * as vscode from "vscode";
 export function activate(fileContext: vscode.ExtensionContext) {
   console.log('Extension "copy-with-file" is active');
 
-  const disposable = vscode.commands.registerCommand(
+  const copyDisposable = vscode.commands.registerCommand(
     "copyWithFile.copy",
     async () => {
       const editor = vscode.window.activeTextEditor;
@@ -25,11 +25,25 @@ export function activate(fileContext: vscode.ExtensionContext) {
 line ${line}`;
 
       await vscode.env.clipboard.writeText(tuple);
-      vscode.window.showInformationMessage("Copied with file");
+      const showNotification = vscode.workspace
+        .getConfiguration("copyWithFile")
+        .get<boolean>("showNotification", true);
+      if (showNotification) {
+        vscode.window.showInformationMessage("Copied with file");
+      }
     }
   );
 
-  fileContext.subscriptions.push(disposable);
+  const reportIssueDisposable = vscode.commands.registerCommand(
+    "copyWithFile.reportIssue",
+    async () => {
+      await vscode.commands.executeCommand("workbench.action.openIssueReporter", {
+        extensionId: fileContext.extension.id,
+      });
+    }
+  );
+
+  fileContext.subscriptions.push(copyDisposable, reportIssueDisposable);
 }
 
 export function deactivate() {}
