@@ -4,9 +4,9 @@ Copy the current selection (or line) along with the full file path and line numb
 
 ## Features
 
-- Command: `Copy With File (code, file, line)`
+- `cmd + shift + P`: `Copy With File (code, file, line)`
 - Output format:
-  ```
+  ```bash
   (
   <code>,
   "/full/path/to/file",
@@ -14,7 +14,10 @@ Copy the current selection (or line) along with the full file path and line numb
   )
   ```
 
+Example:
+
+
 ## Default Keybinding
 
-- macOS: `cmd+alt+c`
+- macOS: `cmd + option + c`
 - You can change this in your own keybindings.
