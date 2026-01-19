@@ -49,7 +49,7 @@
         "properties": {
           "copyWithFile.showNotification": {
             "type": "boolean",
-            "default": true,
+            "default": false,
             "description": "Show the \"Copied with file\" notification after copying."
           }
         }
