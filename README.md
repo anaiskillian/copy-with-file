@@ -14,9 +14,13 @@ Copy the current selection (or line) along with the full file path and line numb
 
 - Example:
   ```bash
+
+
   data = [5, 1, 4, 2, 8],
-  "/Users/anaiskillian/copy-with-file/example.py",
+  "/Users/dir/file.py",
   line 26
+
+
   ```
 
 ## Default Keybinding
