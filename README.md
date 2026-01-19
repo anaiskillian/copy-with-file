@@ -20,6 +20,9 @@ data = [5, 1, 4, 2, 8],
 line 26
 ```
 
+Demo:
+![Copy With File demo](demo.gif)
+
 ## Default Keybinding
 
 - macOS/ windows/ linux: : `cmd + option + c`
