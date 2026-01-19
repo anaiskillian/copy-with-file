@@ -22,6 +22,10 @@
       {
         "command": "copyWithFile.copy",
         "title": "Copy With File (code, file, line)"
+      },
+      {
+        "command": "copyWithFile.reportIssue",
+        "title": "Report Issue"
       }
     ],
     "keybindings": [
@@ -30,6 +34,25 @@
         "key": "cmd+alt+c",
         "mac": "cmd+alt+c",
         "when": "editorTextFocus && !terminalFocus"
+      }
+    ],
+    "menus": {
+      "issue/reporter": [
+        {
+          "command": "copyWithFile.reportIssue"
+        }
+      ]
+    },
+    "configuration": [
+      {
+        "title": "Copy With File",
+        "properties": {
+          "copyWithFile.showNotification": {
+            "type": "boolean",
+            "default": true,
+            "description": "Show the \"Copied with file\" notification after copying."
+          }
+        }
       }
     ]
   },
