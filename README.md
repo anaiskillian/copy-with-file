@@ -4,7 +4,7 @@ Copy the current selection (or line) along with the full file path and line numb
 
 ## Features
 
-- Command: `Copy With Context (code, file, line)`
+- Command: `Copy With File (code, file, line)`
 - Output format:
   ```
   (
