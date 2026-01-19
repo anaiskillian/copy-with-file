@@ -21,7 +21,7 @@ line 26
 ```
 
 Demo:
-![Copy With File demo](demo.gif)
+![Copy With File demo](demo_clip.gif)
 
 ## Default Keybinding
 
