@@ -27,7 +27,7 @@ line ${line}`;
       await vscode.env.clipboard.writeText(tuple);
       const showNotification = vscode.workspace
         .getConfiguration("copyWithFile")
-        .get<boolean>("showNotification", true);
+        .get<boolean>("showNotification", false);
       if (showNotification) {
         vscode.window.showInformationMessage("Copied with file");
       }
