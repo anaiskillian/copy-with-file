@@ -31,7 +31,7 @@
     "keybindings": [
       {
         "command": "copyWithFile.copy",
-        "key": "cmd+alt+c",
+        "key": "ctrl+alt+c",
         "mac": "cmd+alt+c",
         "when": "editorTextFocus && !terminalFocus"
       }
